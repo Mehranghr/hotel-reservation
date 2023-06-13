@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Hotel Reservation</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body class="body">
+        <header class="container-fluid body">
+            <div class="row">
+                <div class="col-lg-4 d-none d-lg-inline-block">
+                    <p><i class="fa fa-location-arrow"></i> 410 S Missouri St, Indianapolis, IN 46225, USA</p>
+                </div>
+                <div class="col-lg-4 d-none d-lg-inline-block">
+                    <p><i class="fa fa-phone"></i> Contact us directly : Mehran Gharibloo <!--phone number--></p>
+                </div>
+            </div>
+        </header>
+        <nav class="navbar navbar-expand-xl bg-light navbar-light sticky-top">
+            <div class="text-center navbar-brand justify-content-center d-none d-xl-inline-block col-sm-2 col-2">
+                <h2>MODERN</h2>
+                <p>BEST HOTEL</p>
+            </div>
+            <button type="button" class="navbar-toggler bg-light" data-toggle="collapse" data-target="#hamburger"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse col-8 col-sm-8 text-center justify-content-center bg-light nav-tabs" id="hamburger">
+                <ul class="navbar-nav nav-justified">
+                    <li class="navbar-item"><a class="nav-link active" href="index.html">HOME</a></li>
+                    <li class="navbar-item"><a class="nav-link text-success" href="html/gallery.html">GALLERY</a></li>
+                    <li class="navbar-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="INDEX/*">ROOMS & SUITS</a>
+                        <div class="dropdown-menu">
+                            <p class="dropdown-item">suite</p>
+                            <p class="dropdown-item">double room</p>
+                            <p class="dropdown-item">family room</p>
+                        </div>
+                    </li>
+                    <li class="navbar-item"><a class="nav-link" href="INDEX/*">DINING & BAR</a></li>
+                    <li class="navbar-item"><a class="nav-link text-success" href="html/map.html">MAP</a></li>
+                    <li class="navbar-item"><a class="nav-link text-success" href="html/weather.html">WEATHER</a></li>
+                    <li class="navbar-item"><a class="nav-link" href="INDEX/*">CONTACTS</a></li>
+                </ul>
+            </div>
+            <div class="navbar-nav col-sm-2 col-2 d-sm-inline-block text-center justify-content-center bg-light kadr"><a href="html/form.html" class="nav-link text-success">SIGN IN</a></div>
+        </nav>
+        <div class="carousel slide body" data-ride="carousel" id="ax">
+            <ul class="carousel-indicators">
+                <li class="active" data-target="#ax" data-slide-to="0"></li>
+                <li data-target="#ax" data-slide-to="1"></li>
+                <li data-target="#ax" data-slide-to="2"></li>
+            </ul>
+            <div class="carousel-inner">
+                <div class="carousel-item active"><img src="images/1000x548_C_ae683816d7d543abfacfebeedb4075e1.jpg" alt="hotel" width="100%" /></div>
+                <div class="carousel-item"><img src="images/teaser.jpeg (1).jpg" alt="hotel" width="100%" /></div>
+                <div class="carousel-item"><img src="images/teaser.jpeg.jpg" alt="hotel" width="100%" /></div>
+            </div>
+            <a class="carousel-control-prev" href="#ax" data-slide="prev"> <span class="carousel-control-prev-icon"></span> </a>
+            <a class="carousel-control-next" href="#ax" data-slide="next"> <span class="carousel-control-next-icon"></span> </a>
+        </div>
+        <main>
+            <div class="container py-5 body" id="form">
+                
+                <form class="row" action="">
+                    <div class="col-12 col-sm-6 col-lg-3 form-group">
+                        <label for="arrival" class="form-control-label">ARRIVAL :</label> 
+                        <input type="text" id="arrival" class="form-control" min="2021-06-01" max="2021-12-31" placeholder="Check IN-date" onclick="changeInput_arr()"/>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 form-group">
+                        <label for="departure" class="form-control-label">DEPARTURE :</label>
+                        <input type="text" id="departure" class="form-control" min="2021-06-03" max="2021-12-31" placeholder="Check OUT-date" onclick="changeInput_dep()"/>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-2 form-group">
+                        <label class="form-control-label">ADULTS :</label>
+                        <select class="form-control mt-2">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-2 form-group">
+                        <label class="form-control-label mt-2">CHILDREN :</label>
+                        <select class="form-control">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-sm-12 col-lg-2 text-center form-group "><a href="" class="d-inline-block kadr">CHECK AVALABILITY</a></div>
+                </form>
+            </div>
+            
+            <div class="container-fluid body" id="section1">
+                <section class="row">
+                    <div class="col-12 col-lg-6">
+                        <p>welcome to</p>
+                        <h2>Best Indianapolis Hotel!</h2>
+                        <p>
+                            The Woods hotel, located at the very heart of Indianapolis is a welcoming retreat both for people traveling across the country and for businessmen, visiting our Rustbelt state for some commercial affairs. Here,
+                            we always make sure that you will have any of your needs satisfied, be it a comfortable hotel room with a strong WiFi signal and a diligent room service, a dining and lounge zone or any additional amenities a
+                            traveller might want...
+                        </p>
+                        <a href="" class="d-inline-block px-5 py-2 kadr">WATCH THE VIDEO</a>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <figure><img src="images/about-1-622x456.jpg" width="100%" height="100%" alt="sight" /></figure>
+                    </div>
+                </section>
+            </div>
+            <div class="container-fluid body" id="section2">
+                <section>
+                    <div class="text-center">
+                        <p>PLENTY OF ROOM</p>
+                        <h2>Rooms & Suites</h2>
+                        <p>Modern Hotel has 35 elegantly furnished and air conditioned classic rooms, which will be a perfect pick both for business and leisure travelers</p>
+                    </div>
+                    <div class="row text-center py-5">
+                        <figure class="col-12 col-lg-4">
+                            <img src="images/home-1-418x313.jpg" width="95%" alt="suite" />
+                            <figcaption class="text-left py-5">
+                                <h3>
+                                    Suite<br />
+                                    $249<small>/per night</small>
+                                </h3>
+                                <p>- Only 5 rooms are available</p>
+                                <p>- Breakfast included</p>
+                                <p>- Price does not include VAT & services fee</p>
+                                <a href="" class="px-4 py-2 kadr">BOOK NOW</a>
+                            </figcaption>
+                        </figure>
+                        <figure class="col-12 col-lg-4">
+                            <img src="images/home-2-418x313.jpg" width="95%" alt="double room" />
+                            <figcaption class="text-left py-5">
+                                <h3>
+                                    Double Room<br />
+                                    $114<small>/per night</small>
+                                </h3>
+                                <p>- Perfect for traveling couples</p>
+                                <p>- Breakfast not included</p>
+                                <p>- Concierge services</p>
+                                <a href="" class="px-4 py-2 kadr">BOOK NOW</a>
+                            </figcaption>
+                        </figure>
+                        <figure class="col-12 col-lg-4">
+                            <img src="images/home-3-418x313.jpg" width="95%" alt="family room" />
+                            <figcaption class="text-left py-5">
+                                <h3>
+                                    Family Room<br />
+                                    $195<small>/per night</small>
+                                </h3>
+                                <p>- Two double beds</p>
+                                <p>- Babysitting facilities</p>
+                                <p>- 1 free bed available on request</p>
+                                <a href="" class="px-4 py-2 kadr">BOOK NOW</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </section>
+            </div>
+            <div class="container-fluid py-5 body" id="section3">
+                <section class="row">
+                    <div class="col-12 text-center">
+                        <h2>Dining & Bar</h2>
+                        <p>
+                            Taste our trademark cocktails & enjoy a truly unique culinary experience...<br />
+                            As the sun sets and the sky turns purple, we celebrate the violet hour and the end of the day before welcoming the start of the night
+                        </p>
+                        <a href="" class="px-2">MAINS</a> <a href="" class="px-2">DESSERTS</a> <a href="" class="px-2">DRINKS</a>
+                    </div>
+                    <div class="col-12 col-lg-6 py-5 body">
+                        <h3>Crumbed Whiting<span class="float-right">$45.89</span></h3>
+                        <p>Fresh local baby whiting fillets in a sesame and parsley crumb s/w chips salad lemon and tartare... This is a lunch that will leave you asking for more!</p>
+                        <h3>Chicken Parmagiana<span class="float-right">$45.89</span></h3>
+                        <p>Chicken Surf & Turf $31 Char grilled garlic chicken breast fillet topped with a garlic seafood sauce & served with garden salad & steak fries or with steamed vegetables and potato.</p>
+                        <h3>Gluten Free Surf & Turf<span class="float-right">$45.89</span></h3>
+                        <p>Char grilled Scotch fillet 300gm topped with a garlic seafood sauce & served with garden salad & steak fries or with steamed veggies roast chat potato.</p>
+                        <h3>Asian noodle salad<span class="float-right">$45.89</span></h3>
+                        <p>Julliene veggies & rice noodles with mint coriander & cashew nuts nestled in mixed leaves and finished with sesame oil and a lime dressing.</p>
+                    </div>
+                    <div class="col-12 col-lg-6 py-5">
+                        <figure><img src="images/dining-and-bar-1-652x486.jpg" alt="food" width="100%" height="100%" /></figure>
+                    </div>
+                    <div class="col-12 text-center"><a href="html/menu.html" class="px-5 py-2 text-success kadr">SEE ALL MENU</a></div>
+                </section>
+            </div>
+            <div class="container-fluid py-5 body" id="section4">
+                <section class="row">
+                    <div class="col-12 text-center py-5">
+                        <p>READ THE REVIEWS, WRITTEN BY</p>
+                        <h2>Our Hotel Guests</h2>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <figure class="text-center">
+                            <img src="images/guest-1-96x96.jpg" alt="guest" class="figure-img rounded-circle" />
+                            <figcaption class="lead">
+                                <h3>Superb!</h3>
+                                <p>
+                                    While staying in Indianapolis on my business affairs I always stay at this place. The price/quality ratio here is just outstanding, allowing me to save more money for other spends while visiting… My
+                                    rating is 5 out of 5!
+                                </p>
+                                <h3>- Martin van Buuren</h3>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <figure class="text-center">
+                            <img src="images/guest-2-96x96.jpg" alt="guest" class="figure-img rounded-circle" />
+                            <figcaption class="lead">
+                                <h3>Incredible!</h3>
+                                <p>
+                                    Choosing a hotel is always challenging, especially if you’re on a hectic schedule and are visiting the place for the first time. That’s why I was so happy that my guess with this hotel was definitely a
+                                    lucky one.
+                                </p>
+                                <h3>- Mary Johnson</h3>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <figure class="text-center">
+                            <img src="images/guest-3-96x96.jpg" alt="guest" class="figure-img rounded-circle" />
+                            <figcaption class="lead">
+                                <h3>Exceptional!</h3>
+                                <p>
+                                    I’ve been visiting Indianapolis last year while touring across the Midwest with my family. The Family room is just great, the hotel’s restaurant (and bar) are nice and overall, even the price was very
+                                    reasonable…
+                                </p>
+                                <h3>- Theodore Roosevelt</h3>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-12 text-center"><a href="" class="px-5 py-2 mt-5 d-inline-block kadr">SEE ALL TESTIMONIALS</a></div>
+                </section>
+            </div>
+            <div class="container-fluid body" id="section5">
+                <section class="row">
+                    <div class="col-12 col-lg-6 ">
+                        <div class="col-12">
+                            <p>HOTEL LOCATION & MAP</p>
+                            <h2>Driving Directions</h2>
+                            <p>Follow the 14th street and then turn right.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 col-lg-5">
+                                <h3>5.4 km</h3>
+                                <p>
+                                    Away from the<br />
+                                    Town hall
+                                </p>
+                            </div>
+                            <div class="col-6 col-lg-5">
+                                <h3>18 km</h3>
+                                <p>
+                                    Away from the<br />
+                                    Airport
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6"><iframe src="https://satellites.pro/" width="100%" height="100%"></iframe></div>
+                </section>
+            </div>
+            <div class="container-fluid d-none d-lg-inline-block py-5 bg-info body" id="section6">
+                <section class="row">
+                    <div class="col-lg-6">
+                        <h2>Sign Up for a Newsletter</h2>
+                        <p>AND NEVER MISS OUR SPECIAL OFFERS AND NEWS!</p>
+                    </div>
+                    <form class="form-group col-lg-6 form-inline justify-content-center">
+                        <input type="email" placeholder="Enter your E-Mail" class="form-control" style="width: 70%;" /> <button type="button" class="btn btn-dark ml-3 px-5 py-1">SUBSCRIBE</button>
+                    </form>
+                </section>
+            </div>
+            <div id="section7" class="body">
+                <section>
+                    <figure>
+                        <img src="images/gallery-01-1200x800.jpg" alt="sights" width="20%" id="ax1" /> <img src="images/gallery-02-1200x800.jpg" alt="sights" width="20%" />
+                        <img src="images/gallery-03-1200x800.jpg" alt="sights" width="20%" /> <img src="images/gallery-04-1200x800.jpg" alt="sights" width="20%" /> <img src="images/gallery-05-1200x800.jpg" alt="sights" width="20%" />
+                        <img src="images/gallery-06-1200x800.jpg" alt="sights" width="20%" /> <img src="images/gallery-07-1200x800.jpg" alt="sights" width="20%" />
+                        <img src="images/gallery-08-1200x800.jpg" alt="sights" width="20%" id="ax2" />
+                    </figure>
+                    <a href="#ax1"><i class="fa fa-chevron-circle-left ml-5 d-none d-md-inline-block"></i></a> <a href="#ax2"><i class="fa fa-chevron-circle-right float-right mr-5 d-none d-md-inline-block"></i></a>
+                </section>
+            </div>
+            <div class="container-fluid bg-dark text-light" id="footer">
+                <footer class="row">
+                    <div class="col-12 col-lg-4">
+                        <h3>MODERN</h3>
+                        <p class="px-3">BEST HOTEL</p>
+                        <p>
+                            While the Modern Hotel is neither the oldest nor the biggest one in Indianapolis or Indiana, we've got our own considerably long history of upholding a benchmark level of quality. Our biggest advantage over other
+                            hotels in the city is our balanced approach. With just 35 rooms, we're a quiet place to stay at.
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <h3>CONTACTS</h3>
+                        <p class="py-5">
+                            410 S Missouri St, Indianapolis, IN 46225, USA<br />
+                            Contact us directly at <!--phone number--><br />
+                            mehran.gharibloo@gmail.com
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <p class="py-5">
+                            &copy;MODERN HOTEL 2021 . ALL RIGHTS RESERVED .<br />
+                            Developing By Mehran Gharibloo Tel: <!--phone number-->
+                        </p>
+                    </div>
+                </footer>
+            </div>
+            <div style="display:inline-block;display: flex; justify-content: space-between; background-color:yellow; align-items: center; " class="container-fluid">
+                <p>choose your background color </p><br>
+                <button type="button" onclick="bodyDark()" style="outline: none; background-color: black; color :white; border:none; display:inline-block;padding:0.5rem 1rem;">dark</button>
+                <button type="button" onclick="bodyLight()" style="outline: none; background-color: white; color :black; border:none; display:inline-block;padding:0.5rem 1rem;">light</button>
+            </div>
+        </main>
+
+        <script src="javascript/index.js"></script>
+
+    </body>
+</html>

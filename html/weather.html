@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+            /* border:1px solid red; */
+        }
+        body{
+            background-image: url(../images/background-3268840_1920.jpg);
+            
+        }
+
+        main{
+            border:1px solid grey;
+            display:flex;
+            justify-content: space-evenly;
+            align-items: center;
+            /* background-color:rgb(179, 245, 229); */
+            width:100vw;
+            height:100vh;
+            
+
+        }
+        #container{
+            border:1px solid grey;
+            background-color:rgb(34, 46, 37);
+            padding:4rem;
+            width:30vw;
+            box-shadow: 10px 5px rgba(169, 169, 169, 0.658);
+            border-radius: 70px 0 70px 70px ;
+
+        }
+        #send-form{
+            margin-bottom:1rem;
+        }
+        #city {
+            border:none;
+            margin-right:1rem;
+            outline: none;
+            width:14vw;
+            height:1.5rem;
+            padding-left:1rem;
+            border-radius: 10rem;
+
+        }
+
+        input[type=submit]{
+            width:4.2rem;
+            height:4.2rem;
+            outline: none;
+            border-radius:25rem;
+            background-color:rgb(179, 245, 229);
+        }
+
+        #temp,#description{
+            color:seashell;
+            font-size:1rem;
+            font-weight:bolder;
+            background-color:grey;
+            display:inline-block;
+            height:2rem;
+            text-align:center;
+            padding:0.3rem;
+        }
+    </style>
+</head>
+<body>
+  <main>
+      <section id="container">
+          <form id="send-form">
+              <input type="text" id="city" placeholder="Enter your City">
+              <input type="submit" value="Search">
+          </form>
+          <section>
+              <p id="cityName" style="color:rgb(179, 245, 229); font-weight:bold; font-size:2rem;"></p>
+              <p id="temp"></p>
+          </section>
+          <section>
+              <img alt id="image" src="https://openweathermap.org/img/wn/02n@2x.png" style="float:right; position:relative; top:-5rem; background-color:rgb(64, 195, 255);">
+              <h3 id="main" style="margin-top:2rem; color:rgb(179, 245, 229);"></h3>
+              <p id="description"></p>
+          </section>
+      </section>
+  </main> 
+
+  <script src="../javascript/weather.js"></script>
+    
+</body>
+</html>

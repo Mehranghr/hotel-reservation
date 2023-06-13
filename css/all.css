@@ -1,0 +1,52 @@
+*{
+    
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+form{
+    background-color:seashell;
+    padding:0 1rem;
+    margin:1rem 0;
+}
+
+.kadr{
+    border:1px solid rgba(158,74,10,1.00);
+    color:rgba(158,74,10,1.00);
+}
+.kadr:hover{
+    text-decoration: none;
+    color:black;
+    
+}
+/* header */
+header{
+    font-size:0.8rem;
+    padding-top:1vh;
+}
+/* end header */
+/* navigation */
+nav{
+    height:12vh;
+}
+nav h2{
+    line-height:2vh;
+    padding-top:4vh;
+    letter-spacing:0.5rem;
+}
+nav p{
+    font-size:0.8rem;
+    letter-spacing:0.5rem;
+}
+nav li{
+    padding:0 0.4rem;
+}
+.dropdown:hover .dropdown-menu{
+    display:inline-block;
+}
+
+/* end navigation */
+#footer{
+    padding-top:10vh;
+}
+

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Untitled Document</title>
+        <link rel="stylesheet" href="../css/all.css" />
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4 d-none d-lg-inline-block">
+                    <p><i class="fa fa-location-arrow"></i> 410 S Missouri St, Indianapolis, IN 46225, USA</p>
+                </div>
+                <div class="col-lg-4 d-none d-lg-inline-block">
+                    <p><i class="fa fa-phone"></i> Contact us directly at +98 936 299 56 43</p>
+                </div>
+            </div>
+        </header>
+        <nav class="navbar navbar-expand-xl bg-light navbar-light sticky-top">
+            <div class="text-center navbar-brand justify-content-center d-none d-xl-inline-block col-sm-2 col-2">
+                <h2>MODERN</h2>
+                <p>BEST HOTEL</p>
+            </div>
+            <button type="button" class="navbar-toggler bg-light" data-toggle="collapse" data-target="#hamburger"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse col-8 col-sm-8 text-center justify-content-center bg-light nav-tabs" id="hamburger">
+                <ul class="navbar-nav">
+                    <li class="navbar-item"><a class="nav-link" href="../index.html">HOME</a></li>
+                    <li class="navbar-item"><a class="nav-link text-success" href="gallery.html">GALLERY</a></li>
+                    <li class="navbar-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="INDEX/*">ROOMS & SUITS</a>
+                        <div class="dropdown-menu">
+                            <p class="dropdown-item">suite</p>
+                            <p class="dropdown-item">double room</p>
+                            <p class="dropdown-item">family room</p>
+                        </div>
+                    </li>
+                    <li class="navbar-item"><a class="nav-link" href="">DINING & BAR</a></li>
+                    <li class="navbar-item"><a class="nav-link text-success" href="map.html">MAP</a></li>
+                    <li class="navbar-item"><a class="nav-link text-success" href="weather.html">WEATHER</a></li>
+                    <li class="navbar-item"><a class="nav-link" href="">CONTACTS</a></li>
+                </ul>
+            </div>
+            <div class="navbar-nav col-sm-2 col-2 d-sm-inline-block text-center justify-content-center bg-light kadr"><a href="form.html" class="nav-link">SIGN IN</a></div>
+        </nav>
+
+
+        <div class="container">
+            <form method="post" action="*" name="myForm" onsubmit="return myF()">
+                <fieldset>
+                    <legend>INFORMATION</legend>
+                    <div class="form-group mt-5">
+                        <label class="d-block">Gender :</label> <input type="radio" id="male" value="male" class="form-control-inline" /> <label for="male" name="gender" class="form-control-label mr-5">Male</label>
+                        <input type="radio" id="female" value="female" class="form-control-inline" /> <label for="female" name="gender" class="form-control-label">Female</label>
+                    </div>
+                    <hr />
+                    <div class="form-group">
+                        <label for="fname" class="form-control-label" id="name">Firstname :</label> 
+                        <input type="text" id="fname" class="form-control" name="fName"/> 
+                        <label for="lname" class="form-control-label pt-3">Lasttname :</label>
+                        <input type="text" id="lname" class="form-control" name="lName"/> 
+                        <label for="id" class="form-control-label pt-3">ID number :</label>
+                        <input type="text" placeholder="123-456789-0" id="id" class="form-control" name="id" />
+                        <label for="mail" class="form-control-label pt-3">E-mail Address:</label> 
+                        <input type="email" id="mail" placeholder="example@yahoo.com" class="form-control" />
+                        <label for="marriage" class="form-control-label pt-3">Marriage :</label>
+                        <select class="form-control">
+                            <option value="single">Single</option>
+                            <option value="engaged">Engaged</option>
+                            <option value="married">Married</option>
+                            <option value="divorced">Divorced</option>
+                        </select>
+                        <label for="religion" class="form-control-label pt-3">Religion :</label>
+                        <select class="form-control">
+                            <option value="islam">Islam</option>
+                            <option value="jew">Jew</option>
+                            <option value="chrise">Chrise</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <label for="bday" class="form-control-label pt-3">Birthday :</label> <input type="date" max="2020-12-31" class="form-control" />
+                    </div>
+                    <hr />
+                    <div class="form-group"><label for="file" class="form-control-label pt-3">Please Choose Youe ID Card Picture File :</label> <input type="file" class="form-control-inline px-5" id="file" /></div>
+                    <hr />
+                    <div class="form-group">
+                        <label for="uname" class="form-control-label pt-3">Define a Username :</label> <input type="text" class="form-control" id="uname" /> <label for="pwd" class="pt-3 form-control-label">Define a Password :</label>
+                        <input type="password" id="pwd" class="form-control" data-toggle="tooltip" title="use Alphabets and Characters-*/+(),.. and Numbers to define a powerful password" data-placement="top" />
+                    </div>
+                    <button class="btn btn-warning my-5" >SUBMIT!</button>
+                </fieldset>
+            </form>
+        </div>
+        <div id="alert"></div>
+        <div class="container-fluid bg-dark text-light" id="footer">
+            <footer class="row">
+                <div class="col-12 col-lg-4">
+                    <h3>MODERN</h3>
+                    <p class="px-3">BEST HOTEL</p>
+                    <p>
+                        While the Modern Hotel is neither the oldest nor the biggest one in Indianapolis or Indiana, we've got our own considerably long history of upholding a benchmark level of quality. Our biggest advantage over other
+                        hotels in the city is our balanced approach. With just 35 rooms, we're a quiet place to stay at.
+                    </p>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <h3>CONTACTS</h3>
+                    <p class="py-5">
+                        410 S Missouri St, Indianapolis, IN 46225, USA<br />
+                        Contact us directly at +98 936 299 56 43<br />
+                        mehran.gharibloo @gmail.com
+                    </p>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <p class="py-5">
+                        &copy;MODERN HOTEL 2021 . ALL RIGHTS RESERVED .<br />
+                        Developing By Mehran Gharibloo Tel: +98 936 299 56 43
+                    </p>
+                </div>
+            </footer>
+        </div>
+
+        <script src="../javascript/form.js"></script>
+        
+    </body>
+</html>

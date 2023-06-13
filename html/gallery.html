@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>gallery</title>
+        <link rel="stylesheet" href="../css/all.css" />
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+            body {
+                background-color: seashell;
+            }
+            figure > img {
+                border: none;
+                border-radius: 5px;
+                width:200px;
+                height:100px;
+                
+            }
+            main {
+                border: 1px solid #777;
+                border-radius: 50px 50px 0 0;
+            }
+            main{
+                display:flex;
+                flex-wrap: wrap;
+                padding:0;
+                margin:0;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+            .active {
+                border: 3px solid black;
+                opacity:0.5;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4 d-none d-lg-inline-block">
+                    <p><i class="fa fa-location-arrow"></i> 410 S Missouri St, Indianapolis, IN 46225, USA</p>
+                </div>
+                <div class="col-lg-4 d-none d-lg-inline-block">
+                    <p><i class="fa fa-phone"></i> Contact us directly at +98 936 299 56 43</p>
+                </div>
+            </div>
+        </header>
+        <nav class="navbar navbar-expand-xl bg-light navbar-light sticky-top">
+            <div class="text-center navbar-brand justify-content-center d-none d-xl-inline-block col-sm-2 col-2">
+                <h2>MODERN</h2>
+                <p>BEST HOTEL</p>
+            </div>
+            <button type="button" class="navbar-toggler bg-light" data-toggle="collapse" data-target="#hamburger"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse col-8 col-sm-8 text-center justify-content-center bg-light nav-tabs" id="hamburger">
+                <ul class="navbar-nav">
+                    <li class="navbar-item"><a class="nav-link" href="../index.html">HOME</a></li>
+                    <li class="navbar-item"><a class="nav-link text-success active" href="gallery.html">GALLERY</a></li>
+                    <li class="navbar-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="INDEX/*">ROOMS & SUITS</a>
+                        <div class="dropdown-menu">
+                            <p class="dropdown-item">suite</p>
+                            <p class="dropdown-item">double room</p>
+                            <p class="dropdown-item">family room</p>
+                        </div>
+                    </li>
+                    <li class="navbar-item"><a class="nav-link" href="">DINING & BAR</a></li>
+                    <li class="navbar-item"><a class="nav-link text-success" href="map.html">MAP</a></li>
+                    <li class="navbar-item"><a class="nav-link" href="">NEWSLETTER</a></li>
+                    <li class="navbar-item"><a class="nav-link" href="">CONTACTS</a></li>
+                </ul>
+            </div>
+            <div class="navbar-nav col-sm-2 col-2 d-sm-inline-block text-center justify-content-center bg-light kadr"><a href="form.html" class="nav-link text-success">SIGN IN</a></div>
+        </nav>
+        <main class="container my-5 py-5 px-5 justify-content-center">
+            <img id="large-img" width="100vw" height="450vh" style="display:inline-block; border:3px solid brown;" class="container mb-5 mt-5 p-2">
+            <div class="row">        
+                
+
+                <figure class="col-sm-12 col-md-6 col-xl-4">
+                    <img src="../images/1000x548_C_ae683816d7d543abfacfebeedb4075e1.jpg" alt class="figure-img" />
+                    <figcaption class="figure-caption">Beautiful Sunset</figcaption>
+                </figure>
+                <figure class="col-sm-12 col-md-6 col-xl-4">
+                    <img src="../images/104854599-1024x683.jpg" alt class="figure-img" />
+                    <figcaption class="figure-caption">Night Parties</figcaption>
+                </figure>
+                <figure class="col-sm-12 col-md-6 col-xl-4">
+                    <img src="../images/almosafer_30.jpg" alt class="figure-img" />
+                    <figcaption class="figure-caption">Wonderful View</figcaption>
+                </figure>
+            </div>
+            <div class="row">
+                <figure class="col-sm-12 col-md-6 col-xl-4">
+                    <img src="../images/download.jpg" alt class="figure-img" />
+                    <figcaption class="figure-caption">Relaxing</figcaption>
+                </figure>
+                <figure class="col-sm-12 col-md-6 col-xl-4">
+                    <img src="../images/Four-Seasons-Koh-Samui-resort-1.jpeg" alt class="figure-img" />
+                    <figcaption class="figure-caption">Calm Ocean</figcaption>
+                </figure>
+                <figure class="col-sm-12 col-md-6 col-xl-4">
+                    <img src="../images/four-seasons-koh-samui-thailand-holiday-header1-1600x700.jpg" alt class="figure-img" />
+                    <figcaption class="figure-caption">Relaxing</figcaption>
+                </figure>
+            </div>
+            <div class="row">
+                <figure class="col-sm-12 col-md-6 col-xl-4">
+                    <img src="../images/FUiMTLOK-1380x690.jpeg" alt class="figure-img" />
+                    <figcaption class="figure-caption">Sun Bathing</figcaption>
+                </figure>
+                <figure class="col-sm-12 col-md-6 col-xl-4">
+                    <img src="../images/gallery-01-1200x800.jpg" alt class="figure-img" />
+                    <figcaption class="figure-caption">Scuba Diving</figcaption>
+                </figure>
+                <figure class="col-sm-12 col-md-6 col-xl-4">
+                    <img src="../images/gallery-02-1200x800.jpg" alt class="figure-img" />
+                    <figcaption class="figure-caption">Hiking</figcaption>
+                </figure>
+            </div>
+            <div class="row">
+                <figure class="col-sm-12 col-md-6 col-xl-4">
+                    <img src="../images/gallery-03-1200x800.jpg" alt class="figure-img" />
+                    <figcaption class="figure-caption">Balloon Tour</figcaption>
+                </figure>
+                <figure class="col-sm-12 col-md-6 col-xl-4">
+                    <img src="../images/gallery-04-1200x800.jpg" alt class="figure-img" />
+                    <figcaption class="figure-caption">Beautiful Islands</figcaption>
+                </figure>
+                <figure class="col-sm-12 col-md-6 col-xl-4">
+                    <img src="../images/gallery-05-1200x800.jpg" class="figure-img" />
+                    <figcaption class="figure-caption">Boat Riding</figcaption>
+                </figure>
+            </div>
+            <div class="row">
+                <figure class="col-sm-12 col-md-6 col-xl-4">
+                    <img src="../images/gallery-06-1200x800.jpg" alt class="figure-img" />
+                    <figcaption class="figure-caption">Mountains Tour</figcaption>
+                </figure>
+                <figure class="col-sm-12 col-md-6 col-xl-4">
+                    <img src="../images/gallery-08-1200x800.jpg" alt class="figure-img" />
+                    <figcaption class="figure-caption">Enjoy The Beach</figcaption>
+                </figure>
+                <figure class="col-sm-12 col-md-6 col-xl-4">
+                    <img src="../images/images.jpg" alt class="figure-img" />
+                    <figcaption class="figure-caption">Private Pool</figcaption>
+                </figure>
+                
+            </div>
+            
+            <div class="container-fluid bg-dark text-light" id="footer">
+                <footer class="row">
+                    <div class="col-12 col-lg-4">
+                        <h3>MODERN</h3>
+                        <p class="px-3">BEST HOTEL</p>
+                        <p>
+                            While the Modern Hotel is neither the oldest nor the biggest one in Indianapolis or Indiana, we've got our own considerably long history of upholding a benchmark level of quality. Our biggest advantage over other
+                            hotels in the city is our balanced approach. With just 35 rooms, we're a quiet place to stay at.
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <h3>CONTACTS</h3>
+                        <p class="py-5">
+                            410 S Missouri St, Indianapolis, IN 46225, USA<br />
+                            Contact us directly at +98 936 299 56 43<br />
+                            mehran.gharibloo @gmail.com
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <p class="py-5">
+                            &copy;MODERN HOTEL 2021 . ALL RIGHTS RESERVED .<br />
+                            Developing By Mehran Gharibloo Tel: +98 936 299 56 43
+                        </p>
+                    </div>
+                </footer>
+            </div>
+        </main>
+
+        <script src="../javascript/gallery.js">
+        
+        </script>
+    </body>
+</html>
